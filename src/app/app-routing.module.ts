@@ -16,6 +16,10 @@ const routes: Routes = [
     loadChildren: () => import('./todo-list/todo-list.module').then(m => m.TodoListModule)
   },
   {
+    path: 'cronometro',
+    loadChildren: () => import('./cronometro/cronometro.module').then(m => m.CronometroModule)
+  },
+  {
     path: '**',
     redirectTo: ''
   }

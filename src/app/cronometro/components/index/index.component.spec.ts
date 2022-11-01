@@ -21,17 +21,18 @@ describe('IndexComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('add item', ()=>{
-    component.addItem('hola');
-    expect(component.items.length).toEqual(1);
+  it(' start time',(done:DoneFn)=>{
+    setTimeout(function() {
+      expect(component.time).toEqual(1);
+      done();
+    }, 1000);
+    component.start()
+
   });
 
-  it('remove item', ()=>{
-    component.addItem('hola');
-    component.addItem('hola');
-    component.removeItem(1);
-
-    expect(component.items.length).toEqual(1);
+  it(' stop time', ()=>{
+    component.stop();
+    expect(component.time).toEqual(0);
   });
 
 });
