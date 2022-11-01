@@ -16,8 +16,6 @@ export class IndexComponent {
       this.resultado = Number(
         (Math.PI * altura * Math.pow(radio, 2)).toFixed(3)
       );
-    } else {
-      console.error('los datos recibidos no son numeros');
     }
   }
 
