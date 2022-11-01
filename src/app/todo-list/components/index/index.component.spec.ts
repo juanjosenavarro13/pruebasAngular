@@ -8,9 +8,8 @@ describe('IndexComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ IndexComponent ]
-    })
-    .compileComponents();
+      declarations: [IndexComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(IndexComponent);
     component = fixture.componentInstance;
@@ -21,17 +20,16 @@ describe('IndexComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('add item', ()=>{
+  it('add item', () => {
     component.addItem('hola');
     expect(component.items.length).toEqual(1);
   });
 
-  it('remove item', ()=>{
+  it('remove item', () => {
     component.addItem('hola');
     component.addItem('hola');
     component.removeItem(1);
 
     expect(component.items.length).toEqual(1);
   });
-
 });

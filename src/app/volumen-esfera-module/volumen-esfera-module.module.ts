@@ -4,14 +4,8 @@ import { CommonModule } from '@angular/common';
 import { VolumenEsferaModuleRoutingModule } from './volumen-esfera-module-routing.module';
 import { IndexComponent } from './components/index/index.component';
 
-
 @NgModule({
-  declarations: [
-    IndexComponent
-  ],
-  imports: [
-    CommonModule,
-    VolumenEsferaModuleRoutingModule
-  ]
+  declarations: [IndexComponent],
+  imports: [CommonModule, VolumenEsferaModuleRoutingModule],
 })
-export class VolumenEsferaModuleModule { }
+export class VolumenEsferaModuleModule {}

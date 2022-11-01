@@ -4,14 +4,8 @@ import { CommonModule } from '@angular/common';
 import { CronometroRoutingModule } from './cronometro-routing.module';
 import { IndexComponent } from './components/index/index.component';
 
-
 @NgModule({
-  declarations: [
-    IndexComponent
-  ],
-  imports: [
-    CommonModule,
-    CronometroRoutingModule
-  ]
+  declarations: [IndexComponent],
+  imports: [CommonModule, CronometroRoutingModule],
 })
-export class CronometroModule { }
+export class CronometroModule {}

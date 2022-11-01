@@ -5,28 +5,33 @@ import { MenuComponent } from './components/menu/menu.component';
 const routes: Routes = [
   {
     path: '',
-    component: MenuComponent
+    component: MenuComponent,
   },
   {
     path: 'volumenEsfera',
-    loadChildren: () => import('./volumen-esfera-module/volumen-esfera-module.module').then(m => m.VolumenEsferaModuleModule)
+    loadChildren: () =>
+      import('./volumen-esfera-module/volumen-esfera-module.module').then(
+        (m) => m.VolumenEsferaModuleModule
+      ),
   },
   {
     path: 'todoList',
-    loadChildren: () => import('./todo-list/todo-list.module').then(m => m.TodoListModule)
+    loadChildren: () =>
+      import('./todo-list/todo-list.module').then((m) => m.TodoListModule),
   },
   {
     path: 'cronometro',
-    loadChildren: () => import('./cronometro/cronometro.module').then(m => m.CronometroModule)
+    loadChildren: () =>
+      import('./cronometro/cronometro.module').then((m) => m.CronometroModule),
   },
   {
     path: '**',
-    redirectTo: ''
-  }
+    redirectTo: '',
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

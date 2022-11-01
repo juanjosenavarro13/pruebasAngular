@@ -8,9 +8,8 @@ describe('IndexComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ IndexComponent ]
-    })
-    .compileComponents();
+      declarations: [IndexComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(IndexComponent);
     component = fixture.componentInstance;
@@ -21,18 +20,16 @@ describe('IndexComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it(' start time',(done:DoneFn)=>{
-    setTimeout(function() {
+  it(' start time', (done: DoneFn) => {
+    setTimeout(function () {
       expect(component.time).toEqual(1);
       done();
     }, 1000);
-    component.start()
-
+    component.start();
   });
 
-  it(' stop time', ()=>{
+  it(' stop time', () => {
     component.stop();
     expect(component.time).toEqual(0);
   });
-
 });
