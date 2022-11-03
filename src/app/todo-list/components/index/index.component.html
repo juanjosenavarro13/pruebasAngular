@@ -1,5 +1,5 @@
 <input type="text" #itemName>
-<button (click)="addItem(itemName.value); itemName.value =''">Guardar</button>
+<button (click)="addItem(itemName.value); itemName.value =''" (keyup.enter)="addItem(itemName.value); itemName.value =''">Guardar</button>
 
 <ul>
   <li *ngFor="let item of items; index as index">{{item}} <button (click)="removeItem(index)">X</button></li>
