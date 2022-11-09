@@ -1,0 +1,37 @@
+<div class="card mb-3">
+  <div class="card-body">
+    <p>
+      Escribir una cadena de texto
+    </p>
+    <p>
+      1- Contará el numero de consonantes
+    </p>
+    <p>
+      2- Transformará la cadena a mayusculas
+    </p>
+    <p>
+      3- Solo obtendremos las consonantes
+    </p>
+  </div>
+</div>
+
+<div class="input-group mb-3">
+  <button class="btn btn-outline-secondary" type="button" (click)="eject(cadena.value)">ejecutar</button>
+  <input type="text" class="form-control" #cadena>
+</div>
+
+
+
+<div class="card mb-3" *ngIf="cadena1 !== 0">
+  <div class="card-body">
+    <p>
+      1- La cadena tiene <small class="fw-bold">{{ cadena1 }}</small> consonantes
+    </p>
+    <p>
+      2- La cadena en mayusculas es <small class="fw-light">{{ cadena2 }}</small>
+    </p>
+    <p>
+      3- La cadena solo consonantes es  <small class="fw-light">{{ cadena3 }}</small>
+    </p>
+  </div>
+</div>

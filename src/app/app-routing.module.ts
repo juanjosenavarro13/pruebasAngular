@@ -25,6 +25,11 @@ const routes: Routes = [
       import('./cronometro/cronometro.module').then((m) => m.CronometroModule),
   },
   {
+    path: 'pac01javi',
+    loadChildren: () =>
+      import('./pac01javi/pac01javi.module').then((m) => m.PAC01javiModule),
+  },
+  {
     path: '**',
     redirectTo: '',
   },
